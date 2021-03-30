@@ -1,0 +1,13 @@
+{
+  "C_Cpp.intelliSenseEngineFallback": "Disabled",
+  "crystal-lang.compiler": "/usr/local/share/crystal-0.33.0-1/bin/crystal",
+  "liveshare.allowGuestDebugControl": true,
+  "liveshare.allowGuestTaskControl": true,
+  "files.associations": {
+    "*.sage": "python",
+    "cstdint": "cpp",
+    "vector": "cpp",
+    "numeric": "cpp",
+    "all": "cpp"
+  }
+}

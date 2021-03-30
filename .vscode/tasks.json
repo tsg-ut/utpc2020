@@ -1,0 +1,114 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Test",
+      "type": "shell",
+      "command": "./.vscode/test.sh",
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "windows": {
+        "options": {
+          "shell": {
+            "executable": "C:\\Windows\\System32\\wsl.exe"
+          }
+        }
+      },
+      "args": [
+        "${fileBasename}"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Submit",
+      "type": "shell",
+      "command": "./.vscode/submit.sh",
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "windows": {
+        "options": {
+          "shell": {
+            "executable": "C:\\Windows\\System32\\wsl.exe"
+          }
+        }
+      },
+      "args": [
+        "${fileBasename}"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run",
+      "type": "shell",
+      "command": "./.vscode/run.sh",
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "windows": {
+        "options": {
+          "shell": {
+            "executable": "C:\\Windows\\System32\\wsl.exe"
+          }
+        }
+      },
+      "args": [
+        "${fileBasename}",
+        "${input:sample-no}"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "./.vscode/build.sh",
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "windows": {
+        "options": {
+          "shell": {
+            "executable": "C:\\Windows\\System32\\wsl.exe"
+          }
+        }
+      },
+      "args": [
+        "${fileBasename}"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "sample-no",
+      "type": "pickString",
+      "description": "Sample to run",
+      "options": [
+        "tests/${fileBasenameNoExtension}/sample-1.in",
+        "tests/${fileBasenameNoExtension}/sample-2.in",
+        "tests/${fileBasenameNoExtension}/sample-3.in",
+        "tests/${fileBasenameNoExtension}/sample-4.in",
+        "tests/${fileBasenameNoExtension}/sample-5.in",
+        "in.txt"
+      ],
+      "default": "tests/${fileBasenameNoExtension}/sample-1.in"
+    }
+  ]
+}
